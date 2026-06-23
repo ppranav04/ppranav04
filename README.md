@@ -1,5 +1,10 @@
-# P Pranav 
-  **`Robotics Software Engineer`**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d4b526d6-0c41-4894-aeb3-39c7176adf91" width="480" alt="banner gif">
+</p>
+
+# 🛠️ P Pranav 
+
+**`Robotics Software Engineer`**
 
 ---
 
