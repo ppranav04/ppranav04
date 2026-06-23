@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/d4b526d6-0c41-4894-aeb3-39c7176adf91" width="480" alt="banner gif">
 </p>
 
-# 🛠️ P Pranav 
+# 🛠️ P Pranav
 
 **`Robotics Software Engineer`**
 
@@ -15,7 +15,6 @@
 - Currently building **Project Tvastr**: teleoperation + ACT policies on an SO-101 arm
 
 ---
-
 
 ### Tech Stack
 
