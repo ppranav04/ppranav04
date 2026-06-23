@@ -57,8 +57,8 @@
 Complete leader-follower teleoperation and imitation-learning pipeline on a 6-DOF SO-101 arm in the Hugging Face LeRobot ecosystem. Recorded pick-and-place demonstrations, trained an **Action Chunking Transformer (ACT)** policy mapping RGB + joint states to action chunks, and deployed it for closed-loop autonomous execution.\
 `Python · PyTorch · LeRobot · ACT · Imitation Learning`
 
-**[SCARA Path Planner - IGCAR Bachelor Thesis](https://github.com/<USERNAME>/scara-planner)**
-PLC-native visibility-graph path planner computing tangent-arc hybrid paths around plugged tubes for a 2-DOF SCARA in PFBR steam-generator tube inspection. Integrated **A\*** with an admissible Euclidean heuristic and benchmarked against **Dijkstra** (identical optimal paths, fewer node expansions). Validated on a 1:1 rig at **0.0031 mm RMS** against a ±2 mm tolerance.\
+**SCARA Path Planner - B.Tech Thesis (IGCAR)**\
+Visibility-graph + A\* path planner for a 2-DOF SCARA among circular obstacles: builds a full visibility graph (start/goal tangents, inter-obstacle cross-tangents, arc-boundary edges) and searches it with **A\*** under an admissible Euclidean heuristic, benchmarked against **Dijkstra** (identical optimal paths, fewer node expansions). Implemented in CODESYS Structured Text on a PLC motion controller and validated on a 1:1 SCARA test rig.\
 `CODESYS · PLC · A* · Visibility Graphs · Python`
 
 **[Autonomous Agricultural Harvester](https://github.com/ppranav04/agrirover)**
