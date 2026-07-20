@@ -57,7 +57,7 @@
 
 ### Projects
 
-**[SO-101 Teleoperation &amp; Imitation Learning (Project Tvastr)](https://github.com/<USERNAME>/tvastr)** - *active*
+**[SO-101 Teleoperation &amp; Imitation Learning (Project Tvastr)](https://github.com/ppranav04/BT-101)** - *active* 
 Complete leader-follower teleoperation and imitation-learning pipeline on a 6-DOF SO-101 arm in the Hugging Face LeRobot ecosystem. Recorded pick-and-place demonstrations, trained an **Action Chunking Transformer (ACT)** policy mapping RGB + joint states to action chunks, and deployed it for closed-loop autonomous execution.\
 `Python · PyTorch · LeRobot · ACT · Imitation Learning`
 
