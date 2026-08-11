@@ -12,7 +12,7 @@
 - I build software for robots to think: assistive prosthetics, food-production automation, and precision systems for scientific infrastructure
 - Focused on perception, motion planning, and learning-based manipulation
 - Best at building, controlling, and programming real hardware: ROS 2, motion/control algorithms, CODESYS/PLC integration
-- Currently building **Project Tvastr**: teleoperation + ACT policies on an SO-101 arm
+- Currently building **BT-101**: teleoperation + ACT policies on an SO-101 arm
 
 ---
 
