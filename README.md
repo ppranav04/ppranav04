@@ -1,4 +1,4 @@
-# 🛠️ P Pranav
+# P Pranav
 
 **`Robotics Software Engineer`**
 
