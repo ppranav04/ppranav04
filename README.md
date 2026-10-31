@@ -5,7 +5,7 @@
 ---
 
 ### About
-**Robotics software engineer · ROS 2 · C++ / Python** · Navigation, manipulation, imitation learning
+Thinking about robot navigation, manipulation, imitation learning
 
 - **Factory navigation (Nav2):** a TurtleBot3 serves 4 machine stations and delivers parts to storage around a moving cart. Found a 97° odometry heading loss caused by wheel slip by comparing against Gazebo ground truth, and cut full-run error to 0.025 m.
 - **SO-101 teleoperation:** leader-follower and joystick control written from the servo serial protocol up, feeding ACT imitation learning in LeRobot
