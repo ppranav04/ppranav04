@@ -12,7 +12,6 @@
 - **SCARA path planning:** visibility-graph + A* planner that matches Dijkstra's optimal paths at up to 48% lower compute time, running on a PLC motion controller
 - **Edge perception:** fine-tuned YOLOv8 ripeness detection running in real time on a Jetson Orin Nano + RealSense D435
 
-B.Tech Mechatronics, VIT Chennai (2026) · Open to robotics software role
 ---
 
 ### Tech Stack
