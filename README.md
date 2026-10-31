@@ -5,11 +5,14 @@
 ---
 
 ### About
-- I write software that lets robots perceive, plan, and act, from motion planning on real hardware to imitation-learned manipulation
-- Focused on manipulation, state estimation, and motion planning
-- Best at building, controlling, and programming real hardware: ROS 2, motion/control algorithms, embedded and PLC integration
-- Currently building the **SO-101 Manipulation Stack** (ROS 2 Jazzy, ros2_control, MoveIt 2) and reimplementing core robotics algorithms from scratch in Python and C++
+**Robotics software engineer · ROS 2 · C++ / Python** · Navigation, manipulation, imitation learning
 
+- **Factory navigation (Nav2):** a TurtleBot3 serves 4 machine stations and delivers parts to storage around a moving cart. Found a 97° odometry heading loss caused by wheel slip by comparing against Gazebo ground truth, and cut full-run error to 0.025 m.
+- **SO-101 teleoperation:** leader-follower and joystick control written from the servo serial protocol up, feeding ACT imitation learning in LeRobot
+- **SCARA path planning:** visibility-graph + A* planner that matches Dijkstra's optimal paths at up to 48% lower compute time, running on a PLC motion controller
+- **Edge perception:** fine-tuned YOLOv8 ripeness detection running in real time on a Jetson Orin Nano + RealSense D435
+
+B.Tech Mechatronics, VIT Chennai (2026) · Open to robotics software role
 ---
 
 ### Tech Stack
@@ -50,9 +53,20 @@
 
 ### Projects
 
+**[TurtleBot3 Factory Navigation](https://github.com/ppranav04/turtlebot3_factory_nav)** - *completed*\
+Simulated CNC factory floor where a TurtleBot3 running **Nav2** collects boxes from 4 machine stations in FIFO order and delivers them to storage, avoiding a **moving pallet cart**. Built a unit-tested **dispatcher state machine** in rclpy and traced a **97° odometry heading loss** to wheel slip using Gazebo ground truth, cutting full-run odometry error to 0.025 m. Docker and GitHub Actions CI. [Demo](https://youtu.be/DCC3VNYN0Us)\
+`ROS 2 Jazzy · Nav2 · slam_toolbox · Gazebo Harmonic · Python · Docker · CI`
+
 **[SO-101 Manipulation Stack](https://github.com/ppranav04/so101_manipulation_stack)** - *active*\
-A ROS 2 Jazzy software stack for the SO-101 arm (5-DOF + gripper): see an object on a table, pick it up, and place it. Building a custom **C++ `ros2_control` hardware interface** for the Feetech STS3215 servo bus, a **closed-form 5-DOF IK solver as a MoveIt 2 plugin** (benchmarked against KDL), camera intrinsics and **hand-eye calibration**, and **RGB pick-and-place** evaluated over 50+ trials. The same controllers run on mock hardware, Gazebo Harmonic, and the real arm, with gtest/pytest, Docker, and GitHub Actions CI.\
-`ROS 2 Jazzy · C++ · ros2_control · MoveIt 2 · Gazebo Harmonic · OpenCV · Docker · CI`
+ROS 2 Jazzy stack for the SO-101 arm (5-DOF + gripper), targeting see-pick-place on a tabletop.\
+Done: C++ `ros2_control` hardware interface for the Feetech STS3215 servo bus\
+In progress: servo read/write\
+Planned: closed-form 5-DOF IK as a MoveIt 2 plugin (vs KDL), hand-eye calibration, RGB pick-and-place, Gazebo Harmonic + CI\
+`ROS 2 Jazzy · C++ · ros2_control · MoveIt 2`
+
+**[BT-101: SO-101 Teleoperation & Imitation Learning](https://github.com/ppranav04/BT-101)** - *active*\
+Leader-follower and joystick teleoperation on the SO-101 arm, built from scratch down to the servo serial protocol and validated against the Hugging Face LeRobot ecosystem. Feeds an imitation-learning pipeline: recording pick-and-place demonstrations to train an **Action Chunking Transformer (ACT)** policy that maps RGB + joint states to action chunks. Next: Diffusion Policy.\
+`Python · PyTorch · LeRobot · ACT · Imitation Learning`
 
 **[Robotics Algorithms from Scratch](https://github.com/ppranav04/robotics-algorithms)** - *active*\
 A study of state estimation, SLAM, planning, and control, implementing each algorithm in both **Python** and **C++17** (Eigen, CMake).\
@@ -60,10 +74,6 @@ Done: **EKF localization**\
 In progress: **UKF**\
 Roadmap: Particle Filter, Graph-Based SLAM, A\*, Hybrid A\*, RRT/RRT\*, Pure Pursuit/Stanley, LQR, MPC, Damped-Least-Squares IK\
 `Python · C++17 · Eigen · CMake · State Estimation · SLAM · Planning · Control`
-
-**[BT-101: SO-101 Teleoperation & Imitation Learning](https://github.com/ppranav04/BT-101)** - *weekend project*\
-Leader-follower and joystick teleoperation on the SO-101 arm, built from scratch down to the servo serial protocol and validated against the Hugging Face LeRobot ecosystem. Feeds an imitation-learning pipeline: recording pick-and-place demonstrations to train an **Action Chunking Transformer (ACT)** policy that maps RGB + joint states to action chunks. Next: Diffusion Policy.\
-`Python · PyTorch · LeRobot · ACT · Imitation Learning`
 
 **SCARA Path Planner - B.Tech Thesis (IGCAR)** - *completed*\
 Visibility-graph + A\* path planner for a 2-DOF SCARA among circular obstacles: builds a full visibility graph (start/goal tangents, inter-obstacle cross-tangents, arc-boundary edges) and searches it with **A\*** under an admissible Euclidean heuristic. Benchmarked against **Dijkstra** across 1–10 obstacles: identical optimal paths, with A\*'s compute-time advantage growing to 48% at 10 obstacles. Implemented in CODESYS Structured Text on a PLC motion controller and validated on a 1:1 SCARA test rig.\
