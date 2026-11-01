@@ -21,6 +21,7 @@ Thinking about robot navigation, manipulation, imitation learning
 ![ROS 2](https://img.shields.io/badge/ROS_2-22314E?style=flat-square&logo=ros&logoColor=white)
 ![ros2_control](https://img.shields.io/badge/ros2__control-22314E?style=flat-square&logo=ros&logoColor=white)
 ![MoveIt](https://img.shields.io/badge/MoveIt_2-0A7E07?style=flat-square&logoColor=white)
+![Nav2](https://img.shields.io/badge/Nav2-22314E?style=flat-square&logo=ros&logoColor=white)
 ![Gazebo](https://img.shields.io/badge/Gazebo-FF6600?style=flat-square&logo=gazebo&logoColor=white)
 ![RViz](https://img.shields.io/badge/RViz-22314E?style=flat-square&logo=ros&logoColor=white)
 
